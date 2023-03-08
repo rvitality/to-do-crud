@@ -14,6 +14,16 @@ const db = mysql.createConnection({
 app.use(cors());
 app.use(express.json());
 
+app.get("/api/list", (req, res) => {
+    const q = "SELECT * FROM todo";
+
+    db.query(q, [], (err, data) => {
+        if (err) res.status(500).json(err);
+
+        return res.status(200).json(data);
+    });
+});
+
 app.listen(8800, () => {
     console.log("Connected to server...");
 });
