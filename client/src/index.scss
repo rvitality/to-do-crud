@@ -28,7 +28,6 @@ html {
 
     @include respond(tab-port) {
         // width < 900?
-        font-size: 65%;
     }
 
     // width < 600?
