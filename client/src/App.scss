@@ -1,3 +1,5 @@
+@import "./styles/mixins.scss";
+
 .app {
     height: 100vh;
     overflow: hidden;
@@ -15,7 +17,7 @@
 }
 
 .container {
-    max-width: 40%;
+    max-width: 30rem;
     margin: -15rem auto 0 auto;
 
     h1 {
@@ -48,6 +50,11 @@
         border: none;
         font-size: 1.1rem;
     }
+
+    .actions {
+        display: flex;
+        gap: 0.5rem;
+    }
 }
 
 .list {
@@ -58,7 +65,7 @@
     border-radius: 0.4rem;
     background-color: #fff;
     height: 50vh;
-    overflow-y: scroll;
+    overflow-y: auto;
 
     &::-webkit-scrollbar {
         width: 4px; /* width of the entire scrollbar */
